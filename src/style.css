@@ -1,3 +1,152 @@
+
+body {
+  margin:0;
+  padding:0;
+  
+}
+h1 {
+  margin: 0 0 10px;
+  padding: 0;
+  color:#fff;
+  font-size: 24px;
+
+}
+
+.box{
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  width: 400px;
+  transform: translate(-50%, -50%);
+
+}
+input{
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  box-sizing:border-box;
+  transition: .7s;
+}
+
+input[type="text"]
+ {
+   background: #D9D9D9;
+   width: 340px;
+   height: 50px;
+   border: none;
+   outline: none;
+   padding: 0 20px;
+   border-radius: 20px 0 0 20px;
+
+}
+
+input[type="imagen"]
+{
+   position:absolute;
+   top:44%;
+   left:85%;
+   border-radius: 0 20px 20px 0;
+   width: 73px; /*botones de busqueda*/
+   height: 49px; /*botones de busqueda*/
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background:#A5A5A5;
+  color:#fff;
+}
+
+input[type="imagen"]:hover
+{
+ background: #FFCB05;
+ 
+}
+/*second box*/
+
+h2 {
+  margin: 0 0 10px;
+  padding: 0;
+  color:#fff;
+  font-size: 24px;
+}
+
+.box2{
+  position: absolute;
+  top: 38%;
+  left: 60%;
+  width: 414px;
+  transform: translate(-30%, -30%);
+
+}
+
+input[type="text2"]
+ {
+   background: #A5A5A5;
+   width: 340px;
+   height: 50px;
+   border: none;
+   outline: none;
+   padding: 0 20px;
+   border-radius: 0 20px 20px 0;
+
+}
+
+input[type="imagen2"]
+{
+   position: absolute;
+   top:44%;
+   left:-17%;
+   border-radius: 20px 0 0 25%;
+   width: 73px; /*botones de busqueda*/
+   height: 49px; /*botones de busqueda*/
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background:#A5A5A5;
+  color:#A5A5A5;
+}
+
+input[type="imagen2"]:hover
+{
+ background: #FFCB05;
+ 
+}
+
+
+
+
+
+
+
 header {
-    color: #12233B;
+    width: 1440px;
+    height: 369px;
+    background: #12233B;
+   color: #fff;
+   border-bottom-right-radius: 10px 10px;
+   border-bottom-left-radius: 10px 10px;
+   
+}
+.img1 {
+    width: 540px;
+    height: 198px;
+    display: block;
+  margin: auto;
+
+}   
+
+/*FOOTER*/
+footer {
+  width: 1440px;
+  height: 53px;
+  position: absolute;
+  bottom: 0;
+}
+
+.f1 {
+
+  box-sizing: content-box;
+  background-color: #12233B;
+  color:#A5A5A5;
+  text-align: center;
+  
 }

@@ -1,13 +1,23 @@
-//mport { pokemonData } from './data.js';
-// import data from './data/lol/lol.js';
 
 import pokemon from "./data/pokemon/pokemon.js";
- 
-console.log (pokemon)
+import dataPokemon from "./data/pokemon/pokemon.js";
+console.log(dataPokemon.pokemon)
 
-// import data from './data/rickandmorty/rickandmorty.js';
 
-// import {num, name, generation, about } from "./pokemon.js";
+//trajimos  la dataPokemon y con el forEach la recorrimos 
+//para traer cada uno de los pokemon.
+dataPokemon.pokemon.forEach ((pokemon)=>{  
+
+    console.log(pokemon.name)
+})    //
+
+const markup = `
+<ul class="pokemon">
+    ${pokemon.map(pokemon => `* ${pokemon.name} is ${pokemon.generation * 7}
+`).join('')}
+
+`;
+console.log()
 
 //window.scrollTo(x-coord, y-coord)  hacer scroll en la las cards.
 

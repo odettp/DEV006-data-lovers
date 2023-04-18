@@ -1,14 +1,21 @@
 //estas funciones son de ejemplo
-import pokemon from "./data/pokemon/pokemon.js";
 
 
-export const pokemonData  = () => {
-  return "pokemonData";
-};
-export const property = pokemon;
+// export const pokemonData  = () => {
+//   return "pokemonData";
+// };
+// export const property = pokemon;
+// console.log(pokemon)
 
 
-export default pokemon;
+// export default pokemon;
+
+// let parsedPokemon = JSON.parse(pokemon) //convertir de string a objeto.
+// console.log(parsedPokemon)
+// data.pokemon.forEach ((pokemon) =>{ 
+
+
+
 
 
 // export const pokemonData = () => {

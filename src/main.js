@@ -1,24 +1,36 @@
 
 import pokemon from "./data/pokemon/pokemon.js";
-import dataPokemon from "./data/pokemon/pokemon.js";
-console.log(dataPokemon.pokemon)
+
+const printCard = (urlPokemon, namePokemon, numberPokemon, typePokemon) => {
+ return `
+   <divclass="card">
+   <img
+   src="${urlPokemon}"
+   alt="${name}" class= "pokemon-img"
+   />
+   <div class = "pokemon-info">
+     <p class="pokemon-number">
+   ${numberPokemon}</p>
+     <p class ="pokemon-name">
+   ${namePokemon}</p>
+     <div class = "type">
+   <p class="fire">${typePokemon}</p>
+      </div>
+     </div>
+   </div>`;
+};
 
 
-//trajimos  la dataPokemon y con el forEach la recorrimos 
-//para traer cada uno de los pokemon.
-dataPokemon.pokemon.forEach ((pokemon)=>{  
+data.pokemon.forEach((pokemon) => {
+  document.getElementById("cards").innerHTML += printCard(
+    pokemon.img,
+    pokemon.name,
+    pokemon.num,
+    pokemon.type
+ );
+});
+console.log (data.pokemon)
 
-    console.log(pokemon.name)
-})    //
 
-const markup = `
-<ul class="pokemon">
-    ${pokemon.map(pokemon => `* ${pokemon.name} is ${pokemon.generation * 7}
-`).join('')}
 
-`;
-console.log()
 
-//window.scrollTo(x-coord, y-coord)  hacer scroll en la las cards.
-
-// window.scrollTo(0,1000);

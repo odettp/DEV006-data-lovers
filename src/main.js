@@ -21,18 +21,11 @@ const printCard = (urlPokemon, namePokemon, numberPokemon, typePokemon) => {
 };
 
 
-data.pokemon.forEach(element => {
-  
-});((pokemon) => {
-  document.getElementById("cards").innerHTML += printCard(
-    pokemon.img,
-    pokemon.name,
-    pokemon.num,
-    pokemon.type
- );
-});
 
-console.log(dataPokemon);
+
+function displayPokemonList(pokemonList) {
+  const pokemonListElement = document.getElementById("pokemon-list");
+  pokemonListElement.innerHTML = "";
 
 
 

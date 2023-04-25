@@ -9,35 +9,48 @@
 // export const pokemonCard = [pokemon];
 // console.log(pokemon)
 
-
 export default pokemon;
 
-const filterDataPokemon = pokemon.filter(pokemon => pokemon.type === "poison" && pokemon.generation === "i");
+// const filterDataPokemon = pokemon.filter(pokemon => pokemon.type === "poison" && pokemon.generation === "i");
 
 
-console.log(filterDataPokemon);
+// console.log(filterDataPokemon);
 
 
-sortData(data, sortBy, sortOrder)
-pokemon.sort();
+// sortData(data, sortBy, sortOrder)
+// pokemon.sort();
 
-computeStats(data)
-
-
-// const pokemonFilter = pokemon.filter (property => ((property.name)||(property.num))
-// console.log (property)
+// computeStats(data)
 
 
-// const pokemon = [num,type];
-// function filteredPokemon = pokemon.filter((pokemon) => {
-//   return pokemon.num === "001" && pokemon.type === 'poison';
-// }).sort((a, b) => a.type - b.type)
-// .map(pokemon => pokemon.name);
+// fetch('https://pokeapi.co/api/v2/type/3')
+//   .then(response => response.json())
+//   .then(data => {
+//     const pokemonOfType = data.pokemon.map(p => p.pokemon.name);
+//     const filteredPokemon = pokemonOfType.filter(name => name.startsWith('b'));
+
+//     console.log(filteredPokemon);
+//   })
+//   .catch(error => console.error(error));
 
 
-// console.log(filteredPokemon);
+    let pokemonData = [];
 
+   
+      pokemonList.forEach(pokemon => {
+        const pokemonElement = document.createElement("div");
+        pokemonElement.innerHTML = `
+          <p>Name: ${pokemon.name}</p>
+          <p><a href="${pokemon.url}" target="_blank">View details</a></p>
+        `;
+        pokemonListElement.appendChild(pokemonElement);
+      });
+    
 
-// const pokemonFilter= pokemon.filter (pokemon => pokemon.type ===type && pokemon.num);
-
-// console.log(pokemonFilter);
+    const pokemonSearchInput = document.getElementById("pokemon-search");
+    pokemonSearchInput.addEventListener("input", event => {
+      const searchQuery = event.target.value.toLowerCase();
+      const filteredPokemon = pokemonData.filter(pokemon => pokemon.name.includes(searchQuery));
+      displayPokemonList(filteredPokemon);
+    });
+    console.log(pokemonData)

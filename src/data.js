@@ -1,18 +1,16 @@
-import pokemon from "./data/pokemon/pokemon.js";
 
-export * from "./data/pokemon/pokemon.js";
 
 
 
 // export const dataPokemon  = () => {
-//   console.log(dataPokemon)
-//   return "pokemon";
+//  console.log(dataPokemon)
+//  return "pokemon";
 // };
-// export const property = pokemon;
+// export const pokemonCard = [pokemon];
 // console.log(pokemon)
 
 
-const pokemonData = [pokemon];
+export default pokemon;
 
 const filterDataPokemon = pokemon.filter(pokemon => pokemon.type === "poison" && pokemon.generation === "i");
 

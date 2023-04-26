@@ -1,31 +1,27 @@
-
-import pokemon from "./data/pokemon/pokemon.js";
+import data from "./data/pokemon/pokemon.js";
 
 const printCard = (urlPokemon, namePokemon, numberPokemon, typePokemon) => {
- return `
-   <divclass="card">
-   <img
-   src="${urlPokemon}"
-   alt="${name}" class= "pokemon-img"
-   />
-   <div class = "pokemon-info">
-     <p class="pokemon-number">
-   ${numberPokemon}</p>
-     <p class ="pokemon-name">
-   ${namePokemon}</p>
-     <div class = "type">
-   <p class="fire">${typePokemon}</p>
+
+  return `<div class="card">
+    <img
+      src="${urlPokemon}"
+      alt="${name}" class="pokemon-img"
+    />
+    <div class="pokemon-info">
+      <p class="pokemon-number">N°${numberPokemon}</p>
+      <p class="pokemon-name">${namePokemon}</p>
+      <div class="pokemon-type">
+        <p class="fire">${typePokemon}</p>
       </div>
-     </div>
-   </div>`;
+    </div>
+  </div>`;
 };
 
-
-
-
-function displayPokemonList(pokemonList) {
-  const pokemonListElement = document.getElementById("pokemon-list");
-  pokemonListElement.innerHTML = "";
-
-
-
+data.pokemon.forEach((pokemon) => {
+  document.getElementById("cards").innerHTML += printCard(
+    pokemon.img,
+    pokemon.name,
+    pokemon.num,
+    pokemon.type
+  );
+});

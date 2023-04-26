@@ -1,7 +1,6 @@
 import data from "./data/pokemon/pokemon.js";
 
 const printCard = (urlPokemon, namePokemon, numberPokemon, typePokemon) => {
-
   return `<div class="card">
     <img
       src="${urlPokemon}"
@@ -24,8 +23,4 @@ data.pokemon.forEach((pokemon) => {
     pokemon.num,
     pokemon.type
   );
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> 32867c466f92d3e2fbcdd4d3c1ec897e324b4c85

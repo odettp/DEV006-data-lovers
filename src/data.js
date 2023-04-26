@@ -1,6 +1,5 @@
 const filterData = (data, condition) => {};
 
-<<<<<<< HEAD
 
 
 
@@ -24,6 +23,3 @@ export function pokemonFilter (pokemon) {
     return false;
   }
 };
-=======
-const sortData = (data, sortBy) => {};
->>>>>>> 32867c466f92d3e2fbcdd4d3c1ec897e324b4c85

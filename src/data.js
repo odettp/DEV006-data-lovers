@@ -1,5 +1,3 @@
+const filterData = (data, condition) => {};
 
-
-//const filterData = (data, condition) => {};
-
-//const sortData = (data, sortBy) => {};
+const sortData = (data, sortBy) => {};

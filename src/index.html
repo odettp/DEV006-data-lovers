@@ -6,39 +6,48 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
     <nav>
-    <header>
+     <header>
       <img class="img1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png" alt="Título_ Pokémon">
     <div class="search">
       <h1> Busqueda de Pokémon:</h1>
       <form>
         <input type="text" name="search" type="text">
           <input type = "imagen" name="data" alt = "Pokeball">
-         
+       
       </form>
     </div>
     <div class="filter">
         <h2> Ordernar por: </h2>
         <form>
             <input type="text" name = "filter" type="text" >
-            <input type="img" name="botón_enviar"  alt="Send">               
+            <input type="img" name="botón_enviar"  alt="Send"> 
+            <ul type = "listSort" >
+              <li>Ordenar de A-z </li>
+              <li> Ordenar de z-A </li>
+             </ul>             
     </div>
     </header>
     <div id="pokemon"></div>
   </nav>
   
-  <div id="pokemon-list"></div>
+  <!-- CARDS -->
+
+  <main>
+    <section id="cards">
+    </section>
+  </main>
+  
 
 
 
-
-
-    <footer>
+    <!-- <footer>
       <div class = "f1">
        <p>Pokemón project </p>
        <p> Copyright©2023</p>
      </div>
-    </footer>
+    </footer> -->
 
     <script src="main.js" type="module"></script>
   </body>

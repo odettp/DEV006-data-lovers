@@ -49,11 +49,11 @@ input[type="text"]
 input[type="imagen"] /*FORMA DE COLOCAR ATRIBUTOS QUE NO PUEDEN SER TOMADOS EN LA MISMA CLASS O ID*/
 {
    position:absolute;
-   top:44%;
+   top:45%;
    left:85%;
    border-radius: 0 20px 20px 0;
    width: 73px; /*botones de busqueda*/
-   height: 49px; /*botones de busqueda*/
+   height: 51px; /*botones de busqueda*/
   border: none;
   outline: none;
   cursor: pointer;
@@ -83,7 +83,7 @@ h2 {
 
 .filter{
   position: absolute;
-  top: 38%;
+  top: 37.5%;
   left: 60%;
   width: 400px;
   transform: translate(-30%, -30%);
@@ -92,11 +92,11 @@ h2 {
 input[type="img"] /*FORMA DE COLOCAR ATRIBUTOS QUE NO PUEDEN SER TOMADOS EN LA MISMA CLASS O ID*/
     {
    position:absolute;
-   top:44%;
+   top:46%;
    left:85%;
    border-radius: 0 20px 20px 0;
    width: 73px; /*botones de busqueda*/
-   height: 49px; /*botones de busqueda*/
+   height: 50px; /*botones de busqueda*/
   border: none;
   outline: none;
   cursor: pointer;
@@ -151,6 +151,8 @@ footer {
   
   
 }
+<<<<<<< HEAD
+=======
 
 main {
   padding: 2rem;
@@ -204,3 +206,4 @@ main {
   background-color: chartreuse;
   color: #fff;
 }
+>>>>>>> 32867c466f92d3e2fbcdd4d3c1ec897e324b4c85

@@ -16,7 +16,7 @@ const printCard = (urlPokemon, namePokemon, numberPokemon, typePokemon) => {
   </div>`;
 };
 
-data.pokemon.forEach((pokemon) => {
+data.pokemon.map((pokemon) => {
   document.getElementById("cards").innerHTML += printCard(
     pokemon.img,
     pokemon.name,

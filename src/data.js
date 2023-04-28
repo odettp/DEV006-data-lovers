@@ -11,15 +11,11 @@ const filterData = (data, condition) => {};
 // console.log(pokemon)
 
 export function printCard ()
-
+console.log(printCard);
 
 let pokemonCard = [""]; 
- console.log (pokemonCard)
+ 
 
-export function pokemonFilter (pokemon) {
-  if (pokemon.type === "fire") {
-    return true;
-  } else {
-    return false;
-  }
+export function pokemonFilter (pokemons, name) {
+
 };

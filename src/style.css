@@ -30,6 +30,7 @@ header {
 }
 
 #search {
+  width: 400px;
   margin-right: 60px;
 }
 
@@ -115,7 +116,6 @@ main {
 }
 
 .card {
-  cursor: pointer;
   text-decoration: none;
 }
 
@@ -126,6 +126,7 @@ main {
   justify-content: center;
   border-radius: 5px;
   height: 160px;
+  cursor: pointer;
 }
 
 .pokemon-info {

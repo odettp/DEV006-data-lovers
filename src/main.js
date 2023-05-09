@@ -19,6 +19,8 @@ const printCard = (urlPokemon, namePokemon, numberPokemon, typePokemon) => {
   </div>`;
 };
 
+// FILTER 
+
 const renderPokemon = () => {
   const result = pokemonFilter(data.pokemon, filterText).map((pokemon) => {
     return printCard(pokemon.img, pokemon.name, pokemon.num, pokemon.type);
@@ -36,3 +38,21 @@ filterForm.addEventListener("submit", (event) => {
 });
 
 renderPokemon();
+
+// SORT
+
+const sortText = "";
+const renderSort = () => {
+  const sortResult = pokemonSort(data.pokemon, sortText).map((pokemon) => {
+    return printCard(pokemon.img, pokemon.name, pokemon.num, pokemon.type);
+  });
+  document.getElementById("cards").innerHTML = sortResult.join("");
+};
+
+//SORT BY A-z /z-A
+const sortForm = document.querySelector(".formSort");
+sortForm.addEventListener("change", (event) => {
+  const sortValue = event.target.value;
+  pokemonSort(data.pokemon, sortValue); // llamamos a la función pokemonSort y actualizamos el orden de los pokemon
+  renderPokemon(); // actualizamos la lista de pokemon
+});

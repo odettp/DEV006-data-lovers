@@ -3,4 +3,13 @@ export function pokemonFilter(data, filterText) {
     return pokemon.name.includes(filterText);
   });
 }
-export function pokemonSort(pokemons, name) {}
+
+export function pokemonSort(pokemonList, sortValue) {
+  return pokemonList.sort((a, b) => {
+    if (sortValue === "A-z") {
+      return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
+    } else if (sortValue === "Z-a") {
+      return a.name > b.name ? -1 : a.name < b.name ? 1 : 0;
+    }
+  });
+}

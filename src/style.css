@@ -4,28 +4,34 @@
   box-sizing: border-box;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    border: none;
 }
 
 header {
   width: 100%;
   background: #12233b;
-  border-bottom-right-radius: 20px 20px;
-  border-bottom-left-radius: 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .img-title {
   width: 540px;
   height: 198px;
-  display: block;
-  margin: auto;
 }
 
-/* FORM - INPUT*/
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("img/fondo.png");
+  opacity: 0.9;
+  background-repeat: repeat;
+}
+
+/* FORM-INPUT-SEARCH */
 
 .inputs {
   display: flex;
-  justify-content: center;
   flex-direction: row;
 }
 
@@ -35,97 +41,83 @@ header {
 }
 
 h1 {
-  margin: 2px 15px 3px;
-  color: #12233b;
+  margin: 8px 32px 3px;
+  color: #faecec;
   font-size: 18px;
 }
 
-.formSearch {
+#formSearch {
   display: flex;
+  justify-content: center;
 }
 
 .searchInput {
-  background: #d9d9d9;
-  width: 340px;
-  padding: 0 20px;
-  border-radius: 20px 0 0 20px;
+  background: #ffcb05;
+  color: black;
+  width: 300px;
+  padding: 5px 20px;
+  border-radius: 12px 0 0 12px;
+  font-size: 16px;
+  border: none;
 }
 
-.img-lupa {
-  /*FORMA DE COLOCAR ATRIBUTOS QUE NO PUEDEN SER TOMADOS EN LA MISMA CLASS O ID*/
-  border-radius: 0 20px 20px 0;
-  width: 54px; /*botones de busqueda*/
-  height: 47px; /*botones de busqueda*/
+.img-pokeball {
+  border-radius: 15%;
+  width: 50px;
+  height: 45px;
   cursor: pointer;
-  background: #a5a5a5;
 }
 
-img-lupa:hover {
-  color: #ffcb05;
-}
-
-/* INPUT - SORT */
+/* FORM-INPUT-SORT */
 
 #sort {
   width: 400px;
 }
 
 h2 {
-  margin: 2px 15px 3px;
-  padding: 0;
-  color: #12233b;
+  margin: 8px 5px 3px;
+  color: #faecec;
   font-size: 18px;
+  padding-inline: 40px;
 }
 
 .formSort {
   display: flex;
-}
-
-.sortInput {
-  background: #d9d9d9;
-  width: 340px;
-  padding: 0 20px;
-  border-radius: 20px 0 0 20px;
-}
-
-.img-pokeball {
-  /*FORMA DE COLOCAR ATRIBUTOS QUE NO PUEDEN SER TOMADOS EN LA MISMA CLASS O ID*/
-  border-radius: 0 20px 20px 0;
-  width: 60px; /*botones de busqueda*/
-  height: 47px; /*botones de busqueda*/
-  cursor: pointer;
-  background: #a5a5a5;
-}
-
-input[type="img"]:hover {
-  background: #c40d0f;
-}
-
-/* DATA-CARDS-POKEMONES*/
-
-main {
-  padding: 4rem;
-  display: flex;
   justify-content: center;
 }
+
+select {
+  background: #ffcb05;
+  color: black;
+  width: 320px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* DATA-CARDS-POKEMON */
 
 #cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  padding: 40px;
 }
 
 .card {
-  text-decoration: none;
+  background-color: #e4e4dc;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 1.23) 0px 3px 6px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
 }
 
 .pokemon-img {
-  background-color: #f2f2f2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
   height: 160px;
+  padding-inline: 10px;
+  align-self: center;
   cursor: pointer;
 }
 
@@ -143,7 +135,6 @@ main {
 }
 
 .pokemon-type {
-  display: flex;
   gap: 10px;
   margin-top: 10px;
 }
@@ -157,6 +148,7 @@ main {
 }
 
 /*FOOTER*/
+
 footer {
   width: 100%;
   position: absolute;
@@ -165,4 +157,20 @@ footer {
   background-color: #12233b;
   color: #a5a5a5;
   position: fixed;
+}
+
+/* MOBILE */
+
+@media only screen and (max-width: 600px) {
+  header {
+    width: 100%;
+  }
+
+  #cards {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    flex-direction: column;
+  }
 }

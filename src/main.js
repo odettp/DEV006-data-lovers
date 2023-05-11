@@ -3,7 +3,14 @@ import { pokemonFilter, pokemonSort } from "./data.js";
 let filterText = "";
 
 // Retorna una card con los datos de un pokemon
-const printCard = (urlPokemon, namePokemon, numberPokemon, typePokemon) => {
+const printCard = (
+  urlPokemon,
+  namePokemon,
+  numberPokemon,
+  typePokemon,
+  height,
+  weight
+) => {
   return `<div class="card">
     <img
       src="${urlPokemon}"
@@ -14,18 +21,28 @@ const printCard = (urlPokemon, namePokemon, numberPokemon, typePokemon) => {
       <p class="pokemon-name">${namePokemon}</p>
       <div class="pokemon-type">
         <p class="fire">${typePokemon}</p>
+        <div class="pokemon-size">
+        <p class="height"> H: ${height}</p>
+        <p class="weight"> W: ${weight}</p>
+        </div>
       </div>
     </div>
   </div>`;
 };
 
-// FILTER 
+// FILTER
 
 const renderPokemon = () => {
   const result = pokemonFilter(data.pokemon, filterText).map((pokemon) => {
-    return printCard(pokemon.img, pokemon.name, pokemon.num, pokemon.type);
+    return printCard(
+      pokemon.img,
+      pokemon.name,
+      pokemon.num,
+      pokemon.type,
+      pokemon.size.height,
+      pokemon.size.weight
+    );
   });
-
   document.getElementById("cards").innerHTML = result.join("");
 };
 
@@ -44,7 +61,13 @@ renderPokemon();
 const sortText = "";
 const renderSort = () => {
   const sortResult = pokemonSort(data.pokemon, sortText).map((pokemon) => {
-    return printCard(pokemon.img, pokemon.name, pokemon.num, pokemon.type);
+    return printCard(
+      pokemon.img,
+      pokemon.name,
+      pokemon.num,
+      pokemon.size,
+      pokemon.type
+    );
   });
   document.getElementById("cards").innerHTML = sortResult.join("");
 };

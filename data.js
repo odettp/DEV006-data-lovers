@@ -1,15 +1,25 @@
-export function pokemonFilter(data, filterText) {
-  return data.filter((pokemon) => {
-    return pokemon.name.includes(filterText);
-  });
-}
+const filterData = (data, condition) => {};
 
-export function pokemonSort(pokemonList, sortValue) {
-  return pokemonList.sort((a, b) => {
-    if (sortValue === "A-z") {
-      return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
-    } else if (sortValue === "Z-a") {
-      return a.name > b.name ? -1 : a.name < b.name ? 1 : 0;
-    }
-  });
-}
+
+
+
+// export const dataPokemon  = () => {
+//  console.log(dataPokemon)
+//  return "pokemon";
+// };
+// export const pokemonCard = [pokemon];
+// console.log(pokemon)
+
+export function printCard ()
+
+
+let pokemonCard = [""]; 
+ console.log (pokemonCard)
+
+export function pokemonFilter (pokemon) {
+  if (pokemon.type === "fire") {
+    return true;
+  } else {
+    return false;
+  }
+};

@@ -2,122 +2,180 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body {
+  margin:0;
+  padding:0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+h1 {
+  margin: 0 0 10px;
+  padding: 0;
+  color:#D9D9D9;
+  font-size: 24px;
+
+}
+
+.search{
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  width: 400px;
+  transform: translate(-50%, -50%);
+
+}
+input{
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  box-sizing:border-box;
+  transition: .7s;
+  
+}
+
+input[type="text"]
+ {
+   background: #D9D9D9;
+   width: 340px;
+   height: 50px;
+   border: none;
+   outline: none;
+   padding: 0 20px;
+   border-radius: 20px 0 0 20px;
+
+}
+
+input[type="imagen"] /*FORMA DE COLOCAR ATRIBUTOS QUE NO PUEDEN SER TOMADOS EN LA MISMA CLASS O ID*/
+{
+   position:absolute;
+   top:45%;
+   left:85%;
+   border-radius: 0 20px 20px 0;
+   width: 73px; /*botones de busqueda*/
+   height: 51px; /*botones de busqueda*/
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background:#A5A5A5;
+  color:#fff;
+  background-image: url(https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png);
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  background-position: 1rem center; /*para centrar la imagen "search", se debe colocar una unidad de medida y la posicion.*/
+  
+}
+
+
+input[type="imagen"]:hover
+{
+ background: #FFCB05;
+ 
+}
+/*second box*/
+
+h2 {
+  margin: 0 0 10px;
+  padding: 0;
+  color:#D9D9D9;
+  font-size: 24px;
+}
+
+.filter{
+  position: absolute;
+  top: 37.5%;
+  left: 60%;
+  width: 400px;
+  transform: translate(-30%, -30%);
+}
+
+input[type="img"] /*FORMA DE COLOCAR ATRIBUTOS QUE NO PUEDEN SER TOMADOS EN LA MISMA CLASS O ID*/
+    {
+   position:absolute;
+   top:46%;
+   left:85%;
+   border-radius: 0 20px 20px 0;
+   width: 73px; /*botones de busqueda*/
+   height: 50px; /*botones de busqueda*/
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background:#A5A5A5;
+  color:#fff;
+  background-image: url(https://cdn4.iconfinder.com/data/icons/smashicons-movies-flat/54/56_-_Pokemon_Flat-512.png);
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  background-position: 1rem center; /*para centrar la imagen "search", se debe colocar una unidad de medida y la posicion.*/
+  
+}
+
+
+input[type="img"]:hover
+{
+ background: #C40D0F;
+ 
 }
 
 header {
+    width: 100%;
+    height: 350px;
+    background: #12233B;
+   color: #fff;
+   border-bottom-right-radius: 20px 20px;
+   border-bottom-left-radius: 20px 20px;
+   
+}
+.img1 {
+    width: 540px;
+    height: 198px;
+    display: block;
+  margin: auto;
+
+}   
+
+/*FOOTER*/
+footer {
   width: 100%;
-  background: #12233b;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 10%;
+  position: absolute;
+  bottom: 0;
+  
 }
 
-.img-title {
-  width: 540px;
-  height: 198px;
+.f1 {
+
+  box-sizing: content-box;
+  text-align: center;
+  background-color: #12233B;
+  color:#A5A5A5;
+  
+  
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-image: url("img/fondo.png");
-  opacity: 0.9;
-  background-repeat: repeat;
-}
-
-/* FORM-INPUT-SEARCH */
-
-.inputs {
-  display: flex;
-  flex-direction: row;
-}
-
-#search {
-  width: 400px;
-  margin-right: 60px;
-}
-
-h1 {
-  margin: 8px 32px 3px;
-  color: #faecec;
-  font-size: 18px;
-}
-
-#formSearch {
+  padding: 2rem;
   display: flex;
   justify-content: center;
 }
-
-.searchInput {
-  background: #ffcb05eb;
-  color: black;
-  width: 300px;
-  padding: 5px 20px;
-  border-radius: 12px 0 0 12px;
-  font-size: 16px;
-  border: none;
-}
-
-.img-pokeball {
-  width: 50px;
-  height: 45px;
-  cursor: pointer;
-}
-
-/* FORM-INPUT-SORT */
-
-#sort {
-  width: 400px;
-}
-
-h2 {
-  margin: 8px 5px 3px;
-  color: #faecec;
-  font-size: 18px;
-  padding-inline: 40px;
-}
-
-.formSort {
-  display: flex;
-  justify-content: center;
-}
-
-select {
-  background: #ffcb05eb;
-  color: black;
-  width: 320px;
-  padding: 12px 16px;
-  border-radius: 12px;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-/* DATA-CARDS-POKEMON */
 
 #cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  padding: 40px;
 }
 
 .card {
-  background-color: #e4e4dc;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 1.23) 0px 3px 6px;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .pokemon-img {
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
   height: 160px;
-  padding-inline: 10px;
-  align-self: center;
-  cursor: pointer;
 }
 
 .pokemon-info {
@@ -134,82 +192,15 @@ select {
 }
 
 .pokemon-type {
+  display: flex;
+  gap: 10px;
   margin-top: 10px;
 }
 
 .fire {
-  display: flex;
-  justify-content: center;
   font-size: 13px;
-  width: 112px;
-  padding: 3px;
+  padding: 5px 20px;
   border-radius: 5px;
-  background-color: #45cc5b;
-  opacity: 0.8;
-  color: #faecec;
-}
-
-.pokemon-size {
-  font-size: 15px;
-  display: flex;
-  flex-direction: row;
-  margin-top: 10px;
-}
-
-.weight {
-  border-radius: 3px;
-  background-color: #12203a;
-  color: aliceblue;
-  padding: 1px;
-  opacity: 0.7;
-}
-
-.height {
-  border-radius: 3px;
-  background-color: #12203a;
-  color: aliceblue;
-  margin-right: 10px;
-  padding: 1px;
-  opacity: 0.7;
-}
-/*FOOTER*/
-
-footer {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-  background-color: #12233b;
-  color: #a5a5a5;
-  position: fixed;
-}
-
-/* MOBILE */
-
-@media only screen and (max-width: 600px) {
-  header {
-    width: 100%;
-  }
-
-  .img-title {
-    width: 80%;
-    height: 70%;
-  }
-
-  .inputs {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #search {
-    margin-right: 0;
-  }
-
-  #cards {
-    grid-template-columns: 1fr;
-  }
-
-  main {
-    flex-direction: column;
-  }
+  background-color: chartreuse;
+  color: #fff;
 }

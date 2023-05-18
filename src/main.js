@@ -30,8 +30,6 @@ const printCard = (
   </div>`;
 };
 
-// FILTER
-
 const renderPokemon = () => {
   const result = pokemonFilter(data.pokemon, filterText).map((pokemon) => {
     return printCard(
@@ -46,6 +44,8 @@ const renderPokemon = () => {
   document.getElementById("cards").innerHTML = result.join("");
 };
 
+// FILTER
+
 const filterForm = document.getElementById("formSearch");
 filterForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -58,24 +58,10 @@ renderPokemon();
 
 // SORT
 
-const sortText = "";
-const renderSort = () => {
-  const sortResult = pokemonSort(data.pokemon, sortText).map((pokemon) => {
-    return printCard(
-      pokemon.img,
-      pokemon.name,
-      pokemon.num,
-      pokemon.size,
-      pokemon.type
-    );
-  });
-  document.getElementById("cards").innerHTML = sortResult.join("");
-};
-
-//SORT BY A-z /z-A
 const sortForm = document.querySelector(".formSort");
 sortForm.addEventListener("change", (event) => {
   const sortValue = event.target.value;
-  pokemonSort(data.pokemon, sortValue); // llamamos a la función pokemonSort y actualizamos el orden de los pokemon
-  renderPokemon(); // actualizamos la lista de pokemon
+  // Llamamos a la función pokemonSort y actualizamos el orden de los pokemon
+  pokemonSort(data.pokemon, sortValue);
+  renderPokemon();
 });

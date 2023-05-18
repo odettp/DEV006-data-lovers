@@ -3,7 +3,7 @@
 El presente producto tiene una interfaz diseñada e intuitiva donde le permitimos al usuario una búsqueda de fácil acceso mediante un buscador que filtra por nombre y un botón que ejecuta la búsqueda requerida.
 La interfaz posee además, una lista despegable alfabética que nos permite ordenar de manera ascendente y descendente.
 La pantalla muestra cards donde el usuario podrá visualizar: el número de orden de cada pokemón, nombre, tipo, peso y altura de cada pokemón.
-La interfaz está diseñada para ser visualizada y manipulada en varios dispositivos, desde desktop hasta diferentes medidas de pantallas mobiles.
+La interfaz está diseñada para ser visualizada y manipulada en varios dispositivos, desde desktop hasta diferentes medidas de pantalla mobile.
 
 ## ORGANIZACION👩‍💻
 
@@ -28,8 +28,11 @@ https://trello.com/invite/b/HxtOxIpA/ATTIa03ae414962624bca2eabd37f69e25d17F5E940
 
 Prototipos de Baja y Alta Fidelidad creados en Figma.
 
-<img src="img/prototipo-de-baja.png">
-<img src="img/prototipo-de-alta.png">
+<img src="./src/img/prototipo-de-baja.png">
+
+<img src="./src/img/prototipo-de-alta.png">
+
+<img src="./src/img/prototipo-mobile.png">
 
 
 
@@ -41,10 +44,12 @@ https://www.figma.com/file/c1q6DbPGrSl4gX2XrgG0vS/ALTA-FIDELIDAD%2F-MOBILE-POKEM
 
 Los test unitarios son un parte fundamental en nuestro proyecto para garantizar la calidad y estabilidad del código, permitiendome detectar y corregir errores de manera eficiente.
 
-<img src="img/test-unitarios.png">
+<img src="./src/img/test-unitarios.png">
 
-## Creditos 💅🏼
+## CREDITOS 💅🏼
 
-Laboratoria:
-Odett Pargas
-Gabriela Pintado
+Laboratoria⭐
+
+[Odett Pargas💁🏼‍♀️]
+
+[Gabriela Pintado❤️]
